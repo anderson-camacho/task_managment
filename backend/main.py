@@ -50,8 +50,3 @@ async def create_task(
     })
     result = await db.tasks.insert_one(doc)
     return TaskOut(**doc, id=str(result.inserted_id))
-
-
-
-
-
