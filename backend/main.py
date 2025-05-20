@@ -17,13 +17,11 @@ from routers.tasks import router as tasks_router
 load_dotenv()
 
 app = FastAPI()
-client = AsyncIOMotorClient(os.getenv("MONGO_URI"))
-db = client.get_default_database()
-
 app.include_router(auth.router)
 app.include_router(tasks.router)
+
 client = AsyncIOMotorClient(os.getenv("MONGO_URI"))
-app.mongodb = client.get_default_database()
+app.mongodb = client["gestor_tareas"] 
 
 def get_current_timestamp():
     return datetime.now(timezone.utc).isoformat()

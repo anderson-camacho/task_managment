@@ -1,0 +1,10 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <input formControlName="title" placeholder="Título" required />
+    <input type="date" formControlName="due_date" />
+    <select formControlName="priority">
+        <option>Alta</option>
+        <option>Media</option>
+        <option>Baja</option>
+    </select>
+    <button type="submit" [disabled]="form.invalid">Crear</button>
+</form>

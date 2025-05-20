@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let t of tasks">
+        <strong>{{ t.title }}</strong>
+        — {{ t.status }} — {{ t.due_date | date:'shortDate' }}
+    </li>
+</ul>
