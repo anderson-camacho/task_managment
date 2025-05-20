@@ -1,8 +1,8 @@
 # backend/routers/auth.py
 
 from fastapi import APIRouter, HTTPException, status, Depends
-from ..schemas.auth import UserRegister, UserLogin
-from ..dependencies import get_database
+from schemas.auth import UserRegister, UserLogin
+from dependencies import get_database
 from passlib.context import CryptContext
 from jose import jwt
 from datetime import datetime, timedelta

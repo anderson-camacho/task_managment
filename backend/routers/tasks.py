@@ -2,8 +2,8 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from typing import List
 from bson import ObjectId
 from datetime import datetime
-from ..schemas.task import TaskCreate, TaskOut
-from ..dependencies import get_current_user  # asume que ya existe esta dependencia
+from schemas.task import TaskCreate, TaskOut
+from dependencies import get_current_user
 
 router = APIRouter(prefix="/tasks", tags=["tasks"])
 
