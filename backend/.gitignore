@@ -3,3 +3,6 @@
 
 # Entorno virtual de Python
 .venv/
+
+# Cache local 
+__pycache__
